@@ -1,0 +1,164 @@
+/* ----------------------
+   Global animated background
+------------------------ */
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(-45deg, #1e2a3a, #2b3548, #1f2b3d, #2b3548); /* darker professional mix */
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
+  color: #fff;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* ----------------------
+   Form container
+------------------------ */
+.form-container {
+  background: linear-gradient(135deg, #355C7D, #6C5B7B); /* subtle and soft */
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Form headings */
+.form-container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Form paragraph */
+.form-container p {
+  font-size: 1rem;
+  color: #e0e0f0;
+}
+
+/* Input fields */
+.form-container input,
+.form-container textarea {
+  border-radius: 8px;
+  border: none;
+  padding: 0.8rem;
+  margin-top: 0.3rem;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  background: rgba(255,255,255,0.07);
+  color: #fff;
+}
+
+/* Button */
+.form-container button {
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #355C7D;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.form-container button:hover {
+  background: #6C5B7B;
+}
+
+/* ----------------------
+   Table container
+------------------------ */
+.table-container {
+  width: 100%;
+  margin-top: 2rem;
+  overflow-x: auto;
+  background: linear-gradient(135deg, #1e2a3a, #2b3548);
+  border-radius: 12px;
+  padding: 1rem;
+  color: #fff;
+}
+
+/* Table headings */
+.table-container th {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Table rows */
+.custom-row {
+  transition: all 0.3s ease;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  margin: 2px 0;
+  display: table-row;
+}
+
+/* Alternating row colors */
+.row-even {
+  background: rgba(53,92,125,0.15);
+}
+
+.row-odd {
+  background: rgba(108,91,123,0.15);
+}
+
+/* Hover effect */
+.custom-row:hover {
+  background: rgba(108,91,123,0.25);
+  transform: translateX(2px);
+}
+
+/* ----------------------
+   Animation placeholder
+------------------------ */
+.animation-space {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(180deg, #355C7D 0%, #6C5B7B 100%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  /* This is the placeholder for future animation */
+}
+
+/* ----------------------
+   Toasts / Alerts
+------------------------ */
+.Toastify__toast {
+  background: rgba(0,0,0,0.6) !important;
+  color: #fff !important;
+  border-radius: 12px !important;
+  font-weight: 500;
+}
+
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.app-container > * {
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.app-container .enquery-slide-in {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.app-container .enquery-visible {
+  transform: translateY(0);
+  opacity: 1;
+}

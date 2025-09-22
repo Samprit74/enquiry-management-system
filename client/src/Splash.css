@@ -1,0 +1,79 @@
+/* Full-screen splash */
+.splash-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  background: #1a1b26; /* Dark professional base */
+  transition: opacity 1s ease;
+}
+
+/* Fade-out effect for smooth transition */
+.fade-out {
+  opacity: 0;
+}
+
+/* Animated background gradient with subtle wave movement */
+.animated-background {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(270deg, #355c7d, #6c5b7b, #355c7d);
+  background-size: 600% 600%;
+  animation: waveGradient 25s ease infinite;
+  z-index: 0;
+}
+
+@keyframes waveGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Splash content */
+.splash-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #ffffff;
+  animation: fadeUp 1s ease forwards;
+}
+
+/* Tagline animation */
+.tagline {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  animation: popUp 1.5s ease forwards;
+}
+
+@keyframes popUp {
+  0% { transform: translateY(50px); opacity: 0; }
+  50% { transform: translateY(-10px); opacity: 0.8; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Subtitle animation */
+.subtitle {
+  font-size: 1.5rem;
+  color: #d1d1d1;
+  opacity: 0;
+  animation: fadeIn 2s ease 1s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* General fade up for content */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
